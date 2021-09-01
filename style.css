@@ -148,8 +148,16 @@ a {
     display: flex;
     flex-direction: column;
     padding: 30px;
+    margin-left: 350px;
+    width: 100%;
+
 }
 
+@media only screen and (max-width: 750px) {
+  .content{
+    margin: 0 auto;
+  }
+}
 .content img{
     max-width: 250px;
 }
@@ -188,4 +196,8 @@ a {
   color: white;
   padding: 10px;
   box-shadow: 3px 3px 3px var(--preto-75);
+}
+
+.form button:hover{
+  color: var(--preto-75);
 }

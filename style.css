@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+:root{
+    --verde: #00582d; /* var(--verde); */
+    --verde-c: #59ba47;
+    --laranja:#ff872a;
+    --laranja-c:#e1a031;
+    --preto-75:#535050;
+    --back: #f7f8f7;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Exo', sans-serif;
+}
+
+
+/* -------- NAVBAR ---------- */
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    color: var(--verde-c);
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    height: 9vh;
+    font-size: 13px;
+  }
+  
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-list li {
+    letter-spacing: 1px;
+    margin-left: 20px;
+  }
+
+  .nav-list li button{
+      border-style: none;
+      color: var(--preto-75);
+      font-size: 15px;
+      background-color: var(--laranja-c);
+      width: 125px;
+      height: 35px;
+      border-radius: 5px;
+      font-weight: bolder;
+  }
+
+  .nav-list li button:hover{
+      color: white;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--preto-75);
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  
+/* ================================= */
+
+.s1{
+    height: 500px;
+    background: url("img/foto-torre.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.content img{
+    max-width: 250px;
+}
+
+.content .form{
+    width: 320px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.content .form h2{
+    font-size: 25px;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.5em var(--preto-75);
+}
+
+.form-group #formGroupExampleInput {
+    width: 93%;
+	margin: 0 auto;
+	padding: 10px;
+	border: none;
+	margin-bottom: 10px;
+	border-radius: 5px;
+    
+}

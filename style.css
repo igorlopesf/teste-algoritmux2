@@ -202,3 +202,40 @@ a {
 .form button:hover{
   color: var(--preto-75);
 }
+
+.s2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px
+}
+
+.s2 .info{
+  max-width: 800px;
+  width: 100%;
+  color: var(--preto-75);
+  width: 100;
+  text-align: left;
+}
+
+.s2 h1{
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.info img{
+  display: flex;
+}
+
+.info .content-info{
+  display: flex;
+  
+}
+.info .content-info p{
+  margin-left: 30px;
+}
+
+.content-info #t3{
+  margin-left: 52px;
+}

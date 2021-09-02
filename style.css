@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
-:root{
-    --verde: #00582d; /* var(--verde); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+:root {
+    --verde: #00582d;
+    /* var(--verde); */
     --verde-c: #59ba47;
-    --laranja:#ff872a;
-    --laranja-c:#e1a031;
-    --preto-75:#535050;
+    --laranja: #ff872a;
+    --laranja-c: #e1a031;
+    --preto-75: #535050;
     --back: #f7f8f7;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -22,121 +24,121 @@ a {
     transition: 0.3s;
     font-weight: bold;
     color: var(--verde-c);
-  }
-  
-  a:hover {
+}
+
+a:hover {
     opacity: 0.7;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: white;
     height: 8vh;
     font-size: 13px;
-  }
+}
 
-  main {
+main {
     height: 92vh;
-  }
-  
-  
-  .nav-list {
+}
+
+.nav-list {
     list-style: none;
     display: flex;
     align-items: center;
-  }
-  
-  .nav-list li {
+}
+
+.nav-list li {
     letter-spacing: 1px;
     margin-left: 20px;
-  }
+}
 
-  .nav-list li button{
-      border-style: none;
-      color: var(--preto-75);
-      font-size: 15px;
-      background-color: var(--laranja-c);
-      width: 125px;
-      height: 35px;
-      border-radius: 5px;
-      font-weight: bolder;
-  }
+.nav-list li button {
+    border-style: none;
+    color: var(--preto-75);
+    font-size: 15px;
+    background-color: var(--laranja-c);
+    width: 125px;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
 
-  .nav-list li button:hover{
-      color: white;
-  }
-  
-  .mobile-menu {
+.nav-list li button:hover {
+    color: white;
+}
+
+.mobile-menu {
     display: none;
     cursor: pointer;
-  }
-  
-  .mobile-menu div {
+}
+
+.mobile-menu div {
     width: 32px;
     height: 2px;
     background: var(--preto-75);
     margin: 8px;
     transition: 0.3s;
-  }
-  
-  @media (max-width: 999px) {
+}
+
+@media (max-width: 999px) {
     body {
-      overflow-x: hidden;
+        overflow-x: hidden;
     }
     .nav-list {
-      position: absolute;
-      top: 8vh;
-      right: 0;
-      width: 50vw;
-      height: 92vh;
-      background: #23232e;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
     }
     .nav-list li {
-      margin-left: 0;
-      opacity: 0;
+        margin-left: 0;
+        opacity: 0;
     }
     .mobile-menu {
-      display: block;
+        display: block;
     }
-  }
-  
-  .nav-list.active {
+}
+
+.nav-list.active {
     transform: translateX(0);
-  }
-  
-  @keyframes navLinkFade {
+}
+
+@keyframes navLinkFade {
     from {
-      opacity: 0;
-      transform: translateX(50px);
+        opacity: 0;
+        transform: translateX(50px);
     }
     to {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
-  
-  .mobile-menu.active .line1 {
+}
+
+.mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
+}
+
+.mobile-menu.active .line2 {
     opacity: 0;
-  }
-  
-  .mobile-menu.active .line3 {
+}
+
+.mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
-  }
-  
+}
+
+
 /* ================================= */
 
-.s1{
+.s1 {
     height: 500px;
     background: url("img/foto-torre.png");
     background-size: cover;
@@ -144,26 +146,30 @@ a {
     flex-direction: column;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    margin-left: 350px;
+    margin-left: 400px;
     max-width: 320px;
     width: 100%;
-
 }
 
 @media only screen and (max-width: 750px) {
-  .content{
-    margin: 0 auto;
-  }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
 }
-.content img{
+
+.content img {
     max-width: 250px;
 }
 
-.content .form{
+.content .form {
     width: 320px;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
@@ -171,71 +177,154 @@ a {
     margin-top: 20px;
 }
 
-.content .form h2{
+.content .form h2 {
     font-size: 25px;
     color: white;
     text-shadow: 0.1em 0.1em 0.5em var(--preto-75);
 }
 
 .form-group #Input {
-  width: 300px; 
-	margin: 0 auto;
-	padding: 10px;
-	border: none;
-	margin-bottom: 10px;
-	border-radius: 5px;   
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
-.form button{
-  width: 100%;
-  font-size: 15px;
-  font-weight: bolder;
-  border-style: none;
-  background-color: var(--laranja);
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-  padding: 10px;
-  box-shadow: 3px 3px 3px var(--preto-75);
+.form button {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bolder;
+    border-style: none;
+    background-color: var(--laranja);
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    box-shadow: 3px 3px 3px var(--preto-75);
 }
 
-.form button:hover{
-  color: var(--preto-75);
+.form button:hover {
+    color: var(--preto-75);
 }
 
-.s2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px
+.s2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px
 }
 
-.s2 .info{
-  max-width: 800px;
-  width: 100%;
-  color: var(--preto-75);
-  width: 100;
-  text-align: left;
+.s2 .info {
+    max-width: 800px;
+    width: 100%;
+    color: var(--preto-75);
+    width: 100;
+    text-align: left;
 }
 
-.s2 h1{
-  margin-top: 50px;
-  font-size: 25px;
-  font-weight: bolder;
+.s2 h1 {
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: 'Lato', sans-serif;
 }
 
-.info img{
-  display: flex;
+.info img {
+    display: flex;
 }
 
-.info .content-info{
-  display: flex;
-  
-}
-.info .content-info p{
-  margin-left: 30px;
+.info .content-info {
+    display: flex;
 }
 
-.content-info #t3{
-  margin-left: 52px;
+.info .content-info p {
+    margin-left: 30px;
+}
+
+.content-info #t3 {
+    margin-left: 52px;
+}
+
+.info-cards {
+    background: url("img/Layer\ 0.png");
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+@media only screen and (max-width: 840px) {
+    .description{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+.cars > card{
+    flex: 1 1 200px;
+    margin-top: 20px;
+}
+
+.info-cards .description {
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    width: 800px;
+    text-align: left;
+    color: white;
+    margin: 50px;
+}
+
+.info-cards .cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
+.info-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--preto-75);
+    width: 210px;
+    height: 300px;
+    background-color: var(--laranja-c);
+    margin: 20px;
+    border-radius: 20px;   
+}
+
+@media only screen and (max-width: 540px) {
+    .info-cards .card{
+        width: 80%;
+    }
+}
+
+.card img {
+    width: 100px;
+    margin: 5px;
+}
+
+
+.card button{
+    border-style: none;
+    width: 110px;
+    background-color: var(--preto-75);
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bolder;
 }
